@@ -7,9 +7,8 @@ abstract class Tiket {
     protected $jadwal_tayang;
     protected $jumlah_kursi;
     protected $hargaDasarTiket;
-    protected $koneksi; // untuk koneksi database
+    protected $koneksi;
 
-    // Constructor - memetakan dari tabel database
     public function __construct($id_tiket, $nama_film, $jadwal_tayang, $jumlah_kursi, $hargaDasarTiket) {
         $this->id_tiket = $id_tiket;
         $this->nama_film = $nama_film;
@@ -18,7 +17,7 @@ abstract class Tiket {
         $this->hargaDasarTiket = $hargaDasarTiket;
     }
 
-    // Getter Methods (untuk mengakses properti private/protected)
+    // Getter Methods
     public function getIdTiket() {
         return $this->id_tiket;
     }
